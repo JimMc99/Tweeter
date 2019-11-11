@@ -123,3 +123,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Jupyter notebook testing
+.00_TweeterMarkovChainsExample-Copy1.ipynb
