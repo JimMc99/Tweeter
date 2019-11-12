@@ -61,7 +61,7 @@ class Tweeter:
             next_values = list(self.markov_model[current_ngram].values())
             next_word = random.choices(next_words, weights=next_values)[0]
 
-            current_ngram = tuple([current_ngram[1], next_word])
+            current_ngram = tuple(current_ngram[1:] + (next_word,))
         new_tweet_list.extend(current_ngram[:-1])
 
         return ' '.join(new_tweet_list)
