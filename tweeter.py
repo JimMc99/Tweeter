@@ -67,6 +67,11 @@ class Tweeter:
         return ' '.join(new_tweet_list)
 
 
+class TrumpTweeter(Tweeter):
+    def __init__(self):
+        super(TrumpTweeter, self).__init__(fpath='trump_tweets.txt')
+
+
 if __name__ == "__main__":
-    trump_tweeter = Tweeter('trump_tweets.txt')
+    trump_tweeter = TrumpTweeter()
     print(trump_tweeter.new_tweet())
