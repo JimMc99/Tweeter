@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import *
-from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtCore import pyqtSlot, Qt
 import sys
 
 from tweeter import TrumpTweeter
@@ -16,6 +16,7 @@ class MainWindow(QMainWindow):
 
         self.label = QLabel(self.trump_tweeter.new_tweet())
         self.label.setWordWrap(True)
+        self.label.setTextInteractionFlags(Qt.TextSelectableByMouse)
         button = QPushButton('New tweet!')
         button.clicked.connect(self.onButtonClick)
 
